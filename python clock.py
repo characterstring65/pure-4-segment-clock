@@ -78,7 +78,7 @@ class GeoptimaliseerdeVerbondenKlok:
         w, h = 100, 200
         cy = 150
         kleur = '#ff1e1e' if actief else '#1c1c1c'
-        dikte = 12 if actief else 1.2
+        dikte = 10 if actief else 1.2
         dikte_verbinding = 1.0 if actief else 1.2
         
         if segment_naam == 'S1':
@@ -118,16 +118,18 @@ class GeoptimaliseerdeVerbondenKlok:
 
         elif segment_naam == 'S4':
             self.teken_schuine_lijn(x_offset + w - 3, cy - h/2 + 120, x_offset + w, cy + h/2 - 75, kleur, dikte)
-            self.teken_schuine_lijn(x_offset + w, cy - h/2 + 28, x_offset + w, cy + h/2 - 180, kleur, dikte)
-            self.teken_schuine_lijn(x_offset + w, cy - h/2 + 62, x_offset + w, cy + h/2 - 140, kleur, dikte)
+            self.teken_schuine_lijn(x_offset + w + 2, cy - h/2 + 28, x_offset + w, cy + h/2 - 180, kleur, dikte)
+            self.teken_schuine_lijn(x_offset + w + 1, cy - h/2 + 62, x_offset + w, cy + h/2 - 140, kleur, dikte)
             self.teken_schuine_lijn(x_offset + w, cy - h/2 + 158, x_offset - 2 + w, cy + h/2 - 26, kleur, dikte)
             self.teken_schuine_lijn(x_offset + 70, cy + 10 - 0.6 * h/4, x_offset + w - 22, cy - 1 - 0.3 * h/2, kleur, dikte)
             self.teken_schuine_lijn(x_offset + w - 10, cy + 10 - 0.6 * h/4, x_offset + w - 10, cy + 11 - 0.3 * h/2, kleur, dikte)
-            self.teken_schuine_lijn(x_offset + w, cy + h/2 - 180, x_offset + w, cy - h/2 + 62, kleur, dikte_verbinding)
+            self.teken_schuine_lijn(x_offset + w + 2, cy - h/2 + 28, x_offset + w + 1, cy - h/2 + 62, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + w, cy + h/2 - 140, x_offset + w - 22, cy - 1 - 0.3 * h/2, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + 70, cy + 10 - 0.6 * h/4, x_offset + w - 10, cy + 10 - 0.6 * h/4, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + w - 10, cy + 11 - 0.3 * h/2, x_offset + w - 3, cy - h/2 + 120, kleur, dikte_verbinding)
-            self.teken_schuine_lijn(x_offset + w, cy + h/2 - 75, x_offset + w, cy - h/2 + 158, kleur, dikte_verbinding)
+            self.teken_schuine_lijn(x_offset + w + 8, cy - h/2 + 158, x_offset + w, cy - h/2 + 158, kleur, dikte_verbinding)
+            self.teken_schuine_lijn(x_offset + w + 8, cy + h/2 - 75, x_offset + w + 8, cy - h/2 + 158, kleur, dikte_verbinding)
+            self.teken_schuine_lijn(x_offset + w, cy + h/2 - 75, x_offset + w + 8, cy + h/2 - 75, kleur, dikte_verbinding)
 
     def teken_cijfer(self, x_offset, cijfer):
         actieve_segmenten = self.cijfer_matrix.get(cijfer, [])
