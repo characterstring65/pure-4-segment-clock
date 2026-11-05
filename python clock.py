@@ -82,9 +82,9 @@ class GeoptimaliseerdeVerbondenKlok:
         dikte_verbinding = 1.0 if actief else 1.2
         
         if segment_naam == 'S1':
-            cx_boog = x_offset + 27 + (w - 25) / 2
+            cx_boog = x_offset + 34 + (w - 25) / 2
             cy_boog = cy + (h / 2) / 2
-            r_x = (w - 21) / 2
+            r_x = (w - 10) / 2
             r_y = (h / 2) / 2
             self.teken_schuine_boog(x_offset, cx_boog, cy_boog, r_x, r_y, 194, 126, kleur, dikte)
             self.teken_schuine_lijn(x_offset + 28, cy + 88 - 0.6 * h/4, x_offset + w - 68, cy + 78 - 0.3 * h/2, kleur, dikte)
@@ -130,7 +130,6 @@ class GeoptimaliseerdeVerbondenKlok:
             self.teken_schuine_lijn(x_offset + w + 18, cy - h/2 + 158, x_offset + w + 10, cy - h/2 + 158, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + w + 8, cy + h/2 - 75, x_offset + w + 18, cy - h/2 + 158, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + w, cy + h/2 - 75, x_offset + w + 8, cy + h/2 - 75, kleur, dikte_verbinding)
-
 
     def teken_cijfer(self, x_offset, cijfer):
         actieve_segmenten = self.cijfer_matrix.get(cijfer, [])
