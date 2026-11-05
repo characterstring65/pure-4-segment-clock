@@ -101,13 +101,13 @@ class GeoptimaliseerdeVerbondenKlok:
             r_y = ((cy + 20) - (cy + 20 - h/2)) / 2
             self.teken_schuine_boog(x_offset, cx_boog, cy_boog, r_x, r_y, 135, 70, kleur, dikte)
             self.teken_schuine_lijn(x_offset + 40, cy + 28 - 0.6 * h/4, x_offset + w - 52, cy + 28 - 0.3 * h/2, kleur, dikte)
-            self.teken_schuine_lijn(x_offset + w + 2, cy - h/2 + 150, x_offset + w + 2, cy + h/2 - 65, kleur, dikte)
+            self.teken_schuine_lijn(x_offset + w + 8, cy - h/2 + 150, x_offset + w + 4, cy + h/2 - 65, kleur, dikte)
             boog_onder_x = cx_boog + r_x * math.cos(math.radians(205))
             boog_onder_y = cy_boog - r_y * math.sin(math.radians(205))
             self.teken_schuine_line_direct(boog_onder_x, boog_onder_y, x_offset + 40, cy + 28 - 0.6 * h/4, kleur, dikte_verbinding)
             boog_boven_x = cx_boog + r_x * math.cos(math.radians(135))
             boog_boven_y = cy_boog - r_y * math.sin(math.radians(135))
-            self.teken_schuine_line_direct(boog_boven_x, boog_boven_y, x_offset + w + 2, cy - h/2 + 150, kleur, dikte_verbinding)
+            self.teken_schuine_line_direct(boog_boven_x, boog_boven_y, x_offset + w + 8, cy - h/2 + 150, kleur, dikte_verbinding)
 
         elif segment_naam == 'S3':
             self.teken_schuine_lijn(x_offset + 48, cy + 10 - h/2, x_offset + w - 5, cy + 10 - h/2, kleur, dikte)
@@ -120,16 +120,17 @@ class GeoptimaliseerdeVerbondenKlok:
             self.teken_schuine_lijn(x_offset + w - 3, cy - h/2 + 120, x_offset + w, cy + h/2 - 75, kleur, dikte)
             self.teken_schuine_lijn(x_offset + w + 2, cy - h/2 + 28, x_offset + w, cy + h/2 - 180, kleur, dikte)
             self.teken_schuine_lijn(x_offset + w + 1, cy - h/2 + 62, x_offset + w, cy + h/2 - 140, kleur, dikte)
-            self.teken_schuine_lijn(x_offset + w, cy - h/2 + 158, x_offset - 2 + w, cy + h/2 - 26, kleur, dikte)
+            self.teken_schuine_lijn(x_offset + w + 8, cy - h/2 + 158, x_offset + 8 + w, cy + h/2 - 26, kleur, dikte)
             self.teken_schuine_lijn(x_offset + 70, cy + 10 - 0.6 * h/4, x_offset + w - 22, cy - 1 - 0.3 * h/2, kleur, dikte)
             self.teken_schuine_lijn(x_offset + w - 10, cy + 10 - 0.6 * h/4, x_offset + w - 10, cy + 11 - 0.3 * h/2, kleur, dikte)
             self.teken_schuine_lijn(x_offset + w + 2, cy - h/2 + 28, x_offset + w + 1, cy - h/2 + 62, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + w, cy + h/2 - 140, x_offset + w - 22, cy - 1 - 0.3 * h/2, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + 70, cy + 10 - 0.6 * h/4, x_offset + w - 10, cy + 10 - 0.6 * h/4, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + w - 10, cy + 11 - 0.3 * h/2, x_offset + w - 3, cy - h/2 + 120, kleur, dikte_verbinding)
-            self.teken_schuine_lijn(x_offset + w + 8, cy - h/2 + 158, x_offset + w, cy - h/2 + 158, kleur, dikte_verbinding)
-            self.teken_schuine_lijn(x_offset + w + 8, cy + h/2 - 75, x_offset + w + 8, cy - h/2 + 158, kleur, dikte_verbinding)
+            self.teken_schuine_lijn(x_offset + w + 18, cy - h/2 + 158, x_offset + w + 10, cy - h/2 + 158, kleur, dikte_verbinding)
+            self.teken_schuine_lijn(x_offset + w + 8, cy + h/2 - 75, x_offset + w + 18, cy - h/2 + 158, kleur, dikte_verbinding)
             self.teken_schuine_lijn(x_offset + w, cy + h/2 - 75, x_offset + w + 8, cy + h/2 - 75, kleur, dikte_verbinding)
+
 
     def teken_cijfer(self, x_offset, cijfer):
         actieve_segmenten = self.cijfer_matrix.get(cijfer, [])
