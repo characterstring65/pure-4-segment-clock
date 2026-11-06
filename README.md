@@ -69,5 +69,7 @@ To maximize cable flexibility, eliminate mechanical strain, and ensure the displ
 
 All passive logic gates, inverse-bit routing, and resistor arrays utilize ultra-small surface-mount technology (SMD 0402 or 0201 packages) and integrated resistor networks. Because a probe meter naturally provides ample space in the longitudinal direction, these components are lined up in a single, narrow row along the length of the internal PCB. They occupy virtually zero display surface area, keeping the active viewing window 100% pure, sleek, and unobstructed.
 
+While the bare display still features the standard pinout, including dedicated COM lines, the auxiliary resistor network condenses these connections down to the absolute minimum.
+
 License
 This project is licensed under the MIT License. Feel free to use, modify, and build upon this matrix for your own hardware or software display projects!
