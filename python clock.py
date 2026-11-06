@@ -78,7 +78,7 @@ class GeoptimaliseerdeVerbondenKlok:
         w, h = 100, 200
         cy = 150
         kleur = '#ff1e1e' if actief else '#1c1c1c'
-        dikte = 10 if actief else 1.2
+        dikte = 14 if actief else 1.2
         dikte_verbinding = 1.0 if actief else 1.2
         
         if segment_naam == 'S1':
