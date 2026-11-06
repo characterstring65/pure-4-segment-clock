@@ -36,5 +36,17 @@ cd pure-4-segment-clock
 3.Run the clock application:
 python clock.py
 
+
+A New Concept for SMD Measurements: The 4-Segment Display
+
+This project introduces a unique, ultra-minimalistic 4-segment display specifically designed to radically improve the ergonomics of multimeters and probe meters.
+
+Why this display is unique:
+
+• Perfect for narrow probe pens: Due to the unique geometry of the 4 segments, the display features a highly slender, elongated form factor. This allows it to fit perfectly on the side of a narrow probe, keeping the measurement value directly within your line of sight while working on microscopic SMD components.
+• Extremely low manufacturing costs: While traditional displays require dozens of pins and expensive driver chips, this design reduces the connection count to just 7 or 8 lines (including decimal points and multiplexing).
+• Minimal hardware requirements: This minimal pin count means that upfront tooling costs for a custom LCD glass pane are exceptionally low. Furthermore, the display can be driven by the most basic, low-cost microcontrollers or logic circuits available on the market.
+
+
 License
 This project is licensed under the MIT License. Feel free to use, modify, and build upon this matrix for your own hardware or software display projects!
